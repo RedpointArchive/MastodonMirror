@@ -114,7 +114,7 @@ echo "-- Docker instructions --"
 echo 
 echo "Run the following Docker command on a server somewhere:"
 echo
-echo -n "docker run --rm "
+echo -n "docker run -d --rm "
 echo -n "-e TWITTER_USERNAME=\"$TWITTER_USERNAME\" "
 echo -n "-e TWITTER_CONSUMER_KEY=\"$TWITTER_CONSUMER_KEY\" "
 echo -n "-e TWITTER_CONSUMER_SECRET=\"$TWITTER_CONSUMER_SECRET\" "
