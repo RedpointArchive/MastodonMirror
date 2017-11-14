@@ -65,7 +65,7 @@ echo
 
 read -p "Paste or enter the Consumer Key (API Key) now: " TWITTER_CONSUMER_KEY
 read -p "Paste or enter the Consumer Secret (API Secret) now: " TWITTER_CONSUMER_SECRET
-read -p "Paste or enter the Access Token now: " TWITTER_ACCESS_TOKEN
+read -p "Paste or enter the Access Token now: " TWITTER_ACCESS_TOKEN_KEY
 read -p "Paste or enter the Access Token Secret now: " TWITTER_ACCESS_TOKEN_SECRET
 
 echo
@@ -107,7 +107,7 @@ echo -n "docker run --rm "
 echo -n "-e TWITTER_USERNAME='$TWITTER_USERNAME' "
 echo -n "-e TWITTER_CONSUMER_KEY='$TWITTER_CONSUMER_KEY' "
 echo -n "-e TWITTER_CONSUMER_SECRET='$TWITTER_CONSUMER_SECRET' "
-echo -n "-e TWITTER_ACCESS_TOKEN_KEY='$TWITTER_ACCESS_TOKEN' "
+echo -n "-e TWITTER_ACCESS_TOKEN_KEY='$TWITTER_ACCESS_TOKEN_KEY' "
 echo -n "-e TWITTER_ACCESS_TOKEN_SECRET='$TWITTER_ACCESS_TOKEN_SECRET'"
 echo -n "-e MASTODON_USER='$MASTODON_USER' "
 echo -n "-e MASTODON_DOMAIN='$MASTODON_DOMAIN' "
