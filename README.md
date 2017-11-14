@@ -2,7 +2,7 @@
 
 _Automatically copy your Twitter posts to Mastodon._
 
-This is a Docker image which copies your Twitter posts to Mastodon in near real-time, including the content of retweets. It requires a bit of setup as you need to obtain OAuth credentials for both your Twitter account and your Mastodon account.
+This is a Docker image which copies your Twitter posts to Mastodon in near real-time, including the content of retweets. It requires a bit of setup as you need to obtain OAuth credentials for both your Twitter account and your Mastodon account. Uses [t2m](https://github.com/Psycojoker/t2m) to do the real work.
 
 ## Getting Started
 
