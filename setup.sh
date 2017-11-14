@@ -106,6 +106,7 @@ cd /srv
 
 MASTODON_USER_CRED=$(cat /srv/t2m_$MASTODON_USER@${MASTODON_DOMAIN}_creds.txt)
 MASTODON_DOMAIN_CRED=$(cat /srv/t2m_${MASTODON_DOMAIN}_clientcred.txt)
+MASTODON_DOMAIN_CRED=$(echo "$MASTODON_DOMAIN_CRED" | tr '\n' '_')
 
 echo
 clear
