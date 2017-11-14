@@ -86,6 +86,15 @@ echo
 read -p "What's your Mastodon username (just the username like 'hq', no domain): " MASTODON_USER
 read -p "What's the domain of your Mastodon instance (just the domain, like 'mastodon.social'): " MASTODON_DOMAIN
 
+echo
+
+cat >/srv/conf.yaml <<EOF
+consumer_key: "$TWITTER_CONSUMER_KEY"
+consumer_secret: "$TWITTER_CONSUMER_SECRET"
+access_token_key: "$TWITTER_ACCESS_TOKEN_KEY"
+access_token_secret: "$TWITTER_ACCESS_TOKEN_SECRET"
+EOF
+
 cd /srv
 /srv/t2m add $TWITTER_ACCOUNT $MASTODON_USER@$MASTODON_DOMAIN
 

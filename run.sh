@@ -8,7 +8,7 @@ source ve/bin/activate
 # write out the credentials
 echo -n $MASTODON_USER_CRED > /srv/t2m_$MASTODON_USER@${MASTODON_DOMAIN}_creds.txt
 echo -n $MASTODON_DOMAIN_CRED > /srv/t2m_${MASTODON_DOMAIN}_clientcred.txt
-cat > /srv/conf.yaml <<EOF
+cat >/srv/conf.yaml <<EOF
 consumer_key: "$TWITTER_CONSUMER_KEY"
 consumer_secret: "$TWITTER_CONSUMER_SECRET"
 access_token_key: "$TWITTER_ACCESS_TOKEN_KEY"
