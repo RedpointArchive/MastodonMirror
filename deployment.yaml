@@ -1,0 +1,45 @@
+# Want to run t2m-docker in a Kubernetes cluster (like Google Container Engine?)
+# just fill in the environment variables based on the setup results and then run:
+# $> kubectl apply -f deployment.yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: t2m-docker
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: t2m-docker
+    spec:
+      containers:
+      - name: t2m-docker
+        image: redpointgames/t2m-docker
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            cpu: 0m
+        env:
+          - name: TWITTER_USERNAME
+            value: ...
+          - name: TWITTER_CONSUMER_KEY
+            value: ...
+          - name: TWITTER_CONSUMER_SECRET
+            value: ...
+          - name: TWITTER_ACCESS_TOKEN_KEY
+            value: ...
+          - name: TWITTER_ACCESS_TOKEN_SECRET
+            value: ...
+          - name: MASTODON_USER
+            value: ...
+          - name: MASTODON_DOMAIN
+            value: ...
+          - name: MASTODON_USER_CRED
+            value: ...
+          - name: MASTODON_DOMAIN_CRED
+            value: ...
