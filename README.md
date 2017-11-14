@@ -6,7 +6,12 @@ This is a Docker image which copies your Twitter posts to Mastodon in near real-
 
 ## Usage
 
-To set up all the required credentials, run this command:
+If you're using Windows, you can run the setup guide really quickly by opening this project in Google Cloud Shell (you'll need a Google account):
+
+<a href="https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/RedpointGames/t2m-docker&page=editor&open_in_editor=README.md">
+<img alt="Open in Cloud Shell" src ="http://gstatic.com/cloudssh/images/open-btn.png"></a>
+
+Alternatively if you're running Linux or Windows with [Docker](https://www.docker.com/) installed, run this command:
 
 ```
 docker run -it --rm redpointgames/t2m-docker setup.sh
