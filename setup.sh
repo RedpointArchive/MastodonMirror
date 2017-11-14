@@ -6,6 +6,7 @@ source ve/bin/activate
 
 TWITTER_APP_NAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 8 | head -n 1)
 
+clear
 echo "-- Welcome to the t2m-docker setup! --"
 echo
 echo "This will guide you through the steps to set up automatic "
@@ -26,6 +27,7 @@ echo "Once you have completed these steps, hit Enter."
 read
 
 echo
+clear
 echo "-- Configure access permissions --"
 echo 
 echo "On the next page, under the 'Details' tab under the 'Application Settings' "
@@ -38,6 +40,7 @@ echo
 read
 
 echo
+clear
 echo "-- Create access token --"
 echo
 echo "Once this setting is saved, click the tab 'Keys and Access Tokens', just "
@@ -51,6 +54,7 @@ echo
 read
 
 echo
+clear
 echo "-- Paste in keys and secrets --"
 echo
 echo "We are almost done with Twitter setup. I just need the "
@@ -69,6 +73,7 @@ read -p "Paste or enter the Access Token now: " TWITTER_ACCESS_TOKEN_KEY
 read -p "Paste or enter the Access Token Secret now: " TWITTER_ACCESS_TOKEN_SECRET
 
 echo
+clear
 echo "-- Final steps --"
 echo
 echo "Finally, what's your Twitter username (without the @ symbol)?"
@@ -77,6 +82,7 @@ echo
 read -p "Paste or enter your Twitter username: " TWITTER_USERNAME
 
 echo
+clear
 echo "-- Mastodon setup --"
 echo 
 echo "Alright! We're all done with Twitter. Now we need to set up the credentials "
@@ -101,7 +107,11 @@ cd /srv
 MASTODON_USER_CRED=$(cat /srv/t2m_$MASTODON_USER@${MASTODON_DOMAIN}_creds.txt)
 MASTODON_DOMAIN_CRED=$(cat /srv/t2m_${MASTODON_DOMAIN}_clientcred.txt)
 
-echo "Run the following Docker command:"
+echo
+clear
+echo "-- Docker instructions --"
+echo 
+echo "Run the following Docker command on a server somewhere:"
 echo
 echo -n "docker run --rm "
 echo -n "-e TWITTER_USERNAME='$TWITTER_USERNAME' "
@@ -114,3 +124,5 @@ echo -n "-e MASTODON_DOMAIN='$MASTODON_DOMAIN' "
 echo -n "-e MASTODON_USER_CRED='$MASTODON_USER_CRED' "
 echo -n "-e MASTODON_DOMAIN_CRED='$MASTODON_DOMAIN_CRED' "
 echo "redpointgames/t2m-docker"
+echo
+echo
